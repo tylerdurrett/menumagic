@@ -1,0 +1,96 @@
+.stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.column > * + * {
+  margin-top: var(--pad);
+}
+
+.row > * + * {
+  margin-left: var(--pad);
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.fullHeight {
+  min-height: var(--viewportHeight, 100vh);
+}
+
+.justifyStart {
+  justify-content: flex-start;
+}
+
+.justifyEnd {
+  justify-content: flex-end;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.justifyAround {
+  justify-content: space-around;
+}
+
+.justifyBetween {
+  justify-content: space-between;
+}
+
+.justifyEven {
+  justify-content: space-evenly;
+}
+
+.alignStretch {
+  align-items: stretch;
+}
+
+.alignCenter {
+  align-items: center;
+}
+
+.alignStart {
+  align-items: flex-start;
+}
+
+.alignEnd {
+  align-items: flex-end;
+}
+
+.pad0 {
+  padding: 0;
+}
+
+.pad-1 {
+  padding: var(--pad-1);
+}
+
+.pad-2 {
+  padding: var(--pad-2);
+}
+.pad1 {
+  padding: var(--pad1);
+}
+
+.pad2 {
+  padding: var(--pad2);
+}
+
+.pad3 {
+  padding: var(--pad3);
+}
+
+.pad4 {
+  padding: var(--pad4);
+}

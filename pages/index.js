@@ -1,65 +1,63 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react';
 import styles from '../styles/Home.module.css'
+import Stack from '../components/ui-lib/Stack/Stack'
+import {methods, flavorProfiles, vegetables, proteins, carbs} from '../data/menu-data'
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
+}
+
+const randomFromPile = pile => {
+  const idx = getRandomIntInclusive(0, pile.length - 1);
+  return pile[idx];
+}
+
+const empty = {name: ''};
 
 export default function Home() {
+
+  const [flavorProfile, setFlavorProfile] = useState(empty);
+  const [method, setMethod] = useState(empty);
+  const [protein, setProtein] = useState(empty);
+  const [carb, setCarb] = useState(empty);
+  const [vegetable, setVegetable] = useState(empty);
+
+  const randomize = () => {
+    setFlavorProfile(randomFromPile(flavorProfiles));
+    setMethod(randomFromPile(methods));
+    setProtein(randomFromPile(proteins));
+    setCarb(randomFromPile(carbs));
+    setVegetable(randomFromPile(vegetables));
+  };
+
+  useEffect(() => {
+    randomize();
+  }, []);
+
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Create Next App</title>
+        <title>Menu Magic</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <Stack justify="between" fullHeight style={{padding: '3rem'}}>
+        <h1>Menu Magic</h1>
+        <div className="menu">
+          <Stack>
+            <div>{flavorProfile.name}</div>
+            <div>{method.name}</div>
+            <div>{protein.name}</div>
+            <div>with</div>
+            <div>{carb.name}</div>
+            <div>and</div>
+            <div>{vegetable.name}</div>
+          </Stack>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+        <button onClick={randomize}>Next</button>
+      </Stack>
     </div>
   )
 }
