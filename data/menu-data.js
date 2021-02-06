@@ -13,8 +13,8 @@ export const methods = [
   {name: 'tacos'},
   {name: 'stir fried'},
   {name: 'raw'},
-  {name: 'stuffed'},
-  {name: 'wild card cook method!'},
+  // {name: 'stuffed'},
+  // {name: 'wild card cook method!'},
 ];
 
 export const flavorProfiles = [
@@ -32,7 +32,7 @@ export const flavorProfiles = [
   {name: 'Caribbean'},
   {name: 'Moroccan'},
   {name: 'Mexican'},
-  {name: 'wild card flavor profile!'},
+  // {name: 'wild card seasoning!'},
 ];
 
 export const vegetables = [
@@ -48,7 +48,7 @@ export const vegetables = [
   {name: 'zucchini'},
   {name: 'carrots'},
   {name: 'cauliflower'},
-  {name: 'wild card vegetable!'},
+  // {name: 'wild card veggie!'},
 ];
 
 export const proteins = [
@@ -64,14 +64,14 @@ export const proteins = [
   {name: 'turkey'},
   // {name: 'smoked salmon'},
   {name: 'chickpeas'},
-  {name: 'wild card protein!'},
+  // {name: 'wild card protein!'},
 ];
 
 export const carbs = [
   {name: 'potatoes'},
   {name: 'rice'},
   {name: 'pasta'},
-  {name: 'break'},
+  {name: 'bread'},
   {name: 'quinoa'},
-  {name: 'wild card carb!'},
+  // {name: 'wild card carb!'},
 ];
