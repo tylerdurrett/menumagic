@@ -1,0 +1,24 @@
+.container {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.title {
+  font-size: 12vw;
+}
+.element {
+  font-size: 8vw;
+  text-transform: capitalize;
+}
+.conjunction {
+
+}
+.button {
+  width: 100%;
+  background: var(--color-bg);
+  border: none;
+  border: 3px solid var(--color-fg);
+  padding: 12px;
+  font-size: 24px;
+  border-radius: 24px;
+}

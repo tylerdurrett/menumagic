@@ -38,25 +38,25 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
+    <div class={styles.container}>
       <Head>
         <title>Menu Magic</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Stack justify="between" fullHeight style={{padding: '3rem'}}>
-        <h1>Menu Magic</h1>
+      <Stack justify="between" fullHeight style={{padding: '1rem'}}>
+        <h1 className={styles.title}>Menu Magic</h1>
         <div className="menu">
           <Stack>
-            <div>{flavorProfile.name}</div>
-            <div>{method.name}</div>
-            <div>{protein.name}</div>
-            <div>with</div>
-            <div>{carb.name}</div>
-            <div>and</div>
-            <div>{vegetable.name}</div>
+            <div className={styles.element}>{flavorProfile.name}</div>
+            <div className={styles.element}>{protein.name}</div>
+            <div className={styles.element}>{method.name}</div>
+            <div className={styles.conjunction}>with</div>
+            <div className={styles.element}>{carb.name}</div>
+            <div className={styles.conjunction}>and</div>
+            <div className={styles.element}>{vegetable.name}</div>
           </Stack>
         </div>
-        <button onClick={randomize}>Next</button>
+        <button className={styles.button} onClick={randomize}>Next</button>
       </Stack>
     </div>
   )

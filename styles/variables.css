@@ -9,8 +9,8 @@
 /* color applications */
 :root {
   --color-primary: var(--color-ocean-green);
-  --color-bg: var(--color-black);
-  --color-fg: var(--color-white);
+  --color-bg: var(--color-white);
+  --color-fg: var(--color-black);
   --color-light-overlay: rgba(255, 255, 255, 0.13);
 
 }
