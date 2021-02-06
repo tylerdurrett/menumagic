@@ -47,6 +47,7 @@ export const vegetables = [
   {name: 'eggplant'},
   {name: 'zucchini'},
   {name: 'carrots'},
+  {name: 'green beans'},
   {name: 'cauliflower'},
   // {name: 'wild card veggie!'},
 ];
@@ -70,8 +71,15 @@ export const proteins = [
 export const carbs = [
   {name: 'potatoes'},
   {name: 'rice'},
-  {name: 'pasta'},
+  // {name: 'pasta'},
   {name: 'bread'},
   {name: 'quinoa'},
+  {name: 'beets'},
+  {name: 'sweet potatoes'},
+  {name: 'cornbread'},
+  {name: 'slaw'},
+  {name: 'grits'},
+  {name: 'root veggies'},
+
   // {name: 'wild card carb!'},
 ];
