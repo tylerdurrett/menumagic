@@ -12,7 +12,7 @@ export const methods = [
   {name: 'pasta'},
   {name: 'tacos'},
   {name: 'stir fried'},
-  {name: 'raw'},
+  // {name: 'raw'},
   // {name: 'stuffed'},
   // {name: 'wild card cook method!'},
 ];
@@ -33,23 +33,6 @@ export const flavorProfiles = [
   {name: 'Moroccan'},
   {name: 'Mexican'},
   // {name: 'wild card seasoning!'},
-];
-
-export const vegetables = [
-  {name: 'spinach'},
-  {name: 'broccoli'},
-  {name: 'kale'},
-  {name: 'asparagus'},
-  {name: 'bok choy'},
-  {name: 'cabbage'},
-  {name: 'greens'},
-  {name: 'okra'},
-  {name: 'eggplant'},
-  {name: 'zucchini'},
-  {name: 'carrots'},
-  {name: 'green beans'},
-  {name: 'cauliflower'},
-  // {name: 'wild card veggie!'},
 ];
 
 export const proteins = [
@@ -82,4 +65,21 @@ export const carbs = [
   {name: 'root veggies'},
 
   // {name: 'wild card carb!'},
+];
+
+export const vegetables = [
+  {name: 'spinach'},
+  {name: 'broccoli'},
+  {name: 'kale'},
+  {name: 'asparagus'},
+  {name: 'bok choy'},
+  {name: 'cabbage'},
+  {name: 'greens'},
+  {name: 'okra'},
+  {name: 'eggplant'},
+  {name: 'zucchini'},
+  {name: 'carrots'},
+  {name: 'green beans'},
+  {name: 'cauliflower'},
+  // {name: 'wild card veggie!'},
 ];
